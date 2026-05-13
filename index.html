@@ -9,60 +9,100 @@
 <body>
     <!-- Cabeçalho -->
     <header>
-        <h1>Agroforte: Futuro Sustentável</h1>
+        <div class="container-header">
+            <h1>Agroforte: Futuro Sustentável</h1>
+            <p>Unindo produção agrícola e preservação ambiental para um futuro equilibrado.</p>
+        </div>
         <nav>
             <ul>
                 <li><a href="#introducao">Introdução</a></li>
-                <li><a href="#interativo">Interativo</a></li>
+                <li><a href="#impacto">Impacto</a></li>
                 <li><a href="#praticas">Boas Práticas</a></li>
+                <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- Seção de Introdução -->
     <section id="introducao">
-        <h2>Equilíbrio entre Produção e Meio Ambiente</h2>
-        <p>O Agroforte visa um futuro sustentável, promovendo a produção agrícola sem prejudicar o meio ambiente.</p>
-        <img src="images/agricultura-sustentavel.jpg" alt="Agricultura Sustentável">
-        <!-- Sugestão de imagem: fazenda sustentável, cultivo orgânico -->
+        <div class="section-content">
+            <h2>O que é Agroforte?</h2>
+            <p>
+                O Agroforte é um projeto que busca o equilíbrio entre a produção agrícola e a preservação do meio ambiente.
+                Por meio de técnicas sustentáveis, é possível aumentar a produtividade sem degradar recursos naturais.
+            </p>
+            <img src="images/agricultura-sustentavel.jpg" alt="Agricultura Sustentável">
+            <!-- Sugestão de imagem: fazenda sustentável, lavouras com árvores -->
+        </div>
     </section>
 
-    <!-- Seção Interativa -->
-    <section id="interativo">
-        <h2>Equilíbrio em Tempo Real</h2>
-        <p>Arraste a barra para ajustar a produção e veja o impacto no meio ambiente:</p>
-        <div class="slider-container">
-            <input type="range" min="0" max="100" value="50" id="impactSlider">
-            <span id="impactValue">50</span>%
+    <!-- Seção de Interatividade -->
+    <section id="impacto">
+        <div class="section-content">
+            <h2>Equilíbrio Produção x Natureza</h2>
+            <p>
+                Use o controle abaixo para ajustar a produção agrícola e observar como isso impacta o meio ambiente. 
+                Quanto mais intensa a produção, maior o impacto ambiental. Buscamos o ponto de equilíbrio!
+            </p>
+
+            <div class="slider-container">
+                <input type="range" min="0" max="100" value="50" id="impactSlider">
+                <span id="impactValue">50</span>%
+            </div>
+
+            <div class="impact-visual">
+                <div id="natureza" title="Natureza"></div>
+                <div id="producao" title="Produção"></div>
+            </div>
+
+            <p id="impactText"></p>
         </div>
-        <div class="impact-visual">
-            <div id="natureza"></div>
-            <div id="producao"></div>
-        </div>
-        <!-- Imagem/representação: fundo de natureza, barra de produção -->
     </section>
 
-    <!-- Seção de Boas Práticas -->
+    <!-- Seção Boas Práticas -->
     <section id="praticas">
-        <h2>Boas Práticas Sustentáveis</h2>
-        <div class="cards">
-            <div class="card">
-                <img src="images/irrigacao.jpg" alt="Irrigação Sustentável">
-                <h3>Irrigação Eficiente</h3>
-                <p>Utilize métodos que economizem água e aumentem a produtividade.</p>
-            </div>
-            <div class="card">
-                <img src="images/energia-solar.jpg" alt="Energia Solar">
-                <h3>Energia Renovável</h3>
-                <p>Adote energia solar ou eólica para reduzir impactos ambientais.</p>
-            </div>
-            <div class="card">
-                <img src="images/compostagem.jpg" alt="Compostagem">
-                <h3>Compostagem</h3>
-                <p>Transforme resíduos orgânicos em adubo, fechando o ciclo sustentável.</p>
+        <div class="section-content">
+            <h2>Boas Práticas Sustentáveis</h2>
+            <p>
+                Para manter o equilíbrio entre produção e meio ambiente, algumas práticas são essenciais:
+            </p>
+            <div class="cards">
+                <div class="card">
+                    <img src="images/irrigacao.jpg" alt="Irrigação Sustentável">
+                    <h3>Irrigação Eficiente</h3>
+                    <p>Economize água usando irrigação por gotejamento ou sensores inteligentes.</p>
+                </div>
+                <div class="card">
+                    <img src="images/energia-solar.jpg" alt="Energia Solar">
+                    <h3>Energia Renovável</h3>
+                    <p>Utilize painéis solares ou energia eólica para reduzir emissões de carbono.</p>
+                </div>
+                <div class="card">
+                    <img src="images/compostagem.jpg" alt="Compostagem">
+                    <h3>Compostagem</h3>
+                    <p>Transforme resíduos orgânicos em adubo, fechando o ciclo sustentável do solo.</p>
+                </div>
+                <div class="card">
+                    <img src="images/plantio-agroflorestal.jpg" alt="Plantio Agroflorestal">
+                    <h3>Agrofloresta</h3>
+                    <p>Combine árvores com lavouras para aumentar biodiversidade e fertilidade do solo.</p>
+                </div>
             </div>
         </div>
-        <!-- Sugestão de imagens: irrigação moderna, painéis solares, compostagem -->
+    </section>
+
+    <!-- Contato -->
+    <section id="contato">
+        <div class="section-content">
+            <h2>Contato</h2>
+            <p>Quer saber mais sobre Agroforte e práticas sustentáveis? Entre em contato conosco!</p>
+            <form>
+                <input type="text" placeholder="Nome" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Mensagem" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
     </section>
 
     <!-- Rodapé -->
