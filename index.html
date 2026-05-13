@@ -1,11 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Agroforte: Futuro Sustentável</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <!-- Cabeçalho -->
+    <header>
+        <h1>Agroforte: Futuro Sustentável</h1>
+        <nav>
+            <ul>
+                <li><a href="#introducao">Introdução</a></li>
+                <li><a href="#interativo">Interativo</a></li>
+                <li><a href="#praticas">Boas Práticas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Seção de Introdução -->
+    <section id="introducao">
+        <h2>Equilíbrio entre Produção e Meio Ambiente</h2>
+        <p>O Agroforte visa um futuro sustentável, promovendo a produção agrícola sem prejudicar o meio ambiente.</p>
+        <img src="images/agricultura-sustentavel.jpg" alt="Agricultura Sustentável">
+        <!-- Sugestão de imagem: fazenda sustentável, cultivo orgânico -->
+    </section>
+
+    <!-- Seção Interativa -->
+    <section id="interativo">
+        <h2>Equilíbrio em Tempo Real</h2>
+        <p>Arraste a barra para ajustar a produção e veja o impacto no meio ambiente:</p>
+        <div class="slider-container">
+            <input type="range" min="0" max="100" value="50" id="impactSlider">
+            <span id="impactValue">50</span>%
+        </div>
+        <div class="impact-visual">
+            <div id="natureza"></div>
+            <div id="producao"></div>
+        </div>
+        <!-- Imagem/representação: fundo de natureza, barra de produção -->
+    </section>
+
+    <!-- Seção de Boas Práticas -->
+    <section id="praticas">
+        <h2>Boas Práticas Sustentáveis</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="images/irrigacao.jpg" alt="Irrigação Sustentável">
+                <h3>Irrigação Eficiente</h3>
+                <p>Utilize métodos que economizem água e aumentem a produtividade.</p>
+            </div>
+            <div class="card">
+                <img src="images/energia-solar.jpg" alt="Energia Solar">
+                <h3>Energia Renovável</h3>
+                <p>Adote energia solar ou eólica para reduzir impactos ambientais.</p>
+            </div>
+            <div class="card">
+                <img src="images/compostagem.jpg" alt="Compostagem">
+                <h3>Compostagem</h3>
+                <p>Transforme resíduos orgânicos em adubo, fechando o ciclo sustentável.</p>
+            </div>
+        </div>
+        <!-- Sugestão de imagens: irrigação moderna, painéis solares, compostagem -->
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2026 Agroforte | Futuro Sustentável</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
