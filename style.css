@@ -1,122 +1,342 @@
-   faça um style.css para este código, não misture o style.css com o index.html, faça um style.css muito bonito !DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agroforte: Futuro Sustentável</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <!-- Cabeçalho -->
-    <header>
-        <div class="container-header">
-            <h1>Agroforte: Futuro Sustentável</h1>
-            <p>Unindo produção agrícola e preservação ambiental para um futuro equilibrado.</p>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#introducao">Introdução</a></li>
-                <li><a href="#impacto">Impacto</a></li>
-                <li><a href="#praticas">Boas Práticas</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
+   /* =======================
+   CONFIGURAÇÕES GERAIS
+======================= */
 
-    <!-- Seção de Introdução -->
-    <section id="introducao">
-        <div class="section-content">
-            <h2>O que é Agroforte?</h2>
-            <p>
-                O Agroforte é um projeto que busca o equilíbrio entre a produção agrícola e a preservação do meio ambiente.
-                Por meio de técnicas sustentáveis, é possível aumentar a produtividade sem degradar recursos naturais.
-            </p>
-            <img src="img/logoagricultura.png" alt="Agricultura Sustentável">
-            <!-- Sugestão de imagem: fazenda sustentável, lavouras com árvores -->
-        </div>
-    </section>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-    <!-- Seção de Interatividade -->
-    <section id="impacto">
-        <div class="section-content">
-            <h2>Equilíbrio Produção x Natureza</h2>
-            <p>
-                Use o controle abaixo para ajustar a produção agrícola e observar como isso impacta o meio ambiente. 
-                Quanto mais intensa a produção, maior o impacto ambiental. Buscamos o ponto de equilíbrio!
-        
-            </p>
+html{
+    scroll-behavior:smooth;
+}
 
-            <div class="slider-container">
-                <input type="range" min="0" max="100" value="50" id="impactSlider">
-                <span id="impactValue">50</span>%
-            </div>
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f5f9f5;
+    color:#333;
+    line-height:1.7;
+}
 
-            <div class="impact-visual">
-                <div id="natureza" title="Natureza"></div>
-                <div id="producao" title="Produção"></div>
-            </div>
+/* =======================
+   CABEÇALHO
+======================= */
 
-            <p id="impactText"></p>
-        </div>
-    </section>
+header{
+    background:linear-gradient(rgba(0,80,0,.7),rgba(0,80,0,.7)),
+    url("img/banner.jpg");
+    background-size:cover;
+    background-position:center;
+    color:white;
+    text-align:center;
+    padding:100px 20px;
+}
 
-    <!-- Seção Boas Práticas -->
-    <section id="praticas">
-        <div class="section-content">
-            <h2>Boas Práticas Sustentáveis</h2>
-            <p>
-                Para manter o equilíbrio entre produção e meio ambiente, algumas práticas são essenciais:
-            </p>
-            <div class="cards">
-                <div class="card">
-                    <img src="img/irrigacaosustentavel.png" alt="Irrigação Sustentável">
-                    <h3>Irrigação Eficiente</h3>
-                    <p>Economize água usando irrigação por gotejamento ou sensores inteligentes.</p>
-                </div>
-                <div class="card">
-                    <img src="img/energiasolar.png" alt="Energia Solar">
-                    <h3>Energia Renovável</h3>
-                    <p>Utilize painéis solares ou energia eólica para reduzir emissões de carbono.</p>
-                </div>
-                <div class="card">
-                    <img src="img/compostagem.png" alt="Compostagem">
-                    <h3>Compostagem</h3>
-                    <p>Transforme resíduos orgânicos em adubo, fechando o ciclo sustentável do solo.</p>
-                </div>
-                <div class="card">
-                    <img src="img/plantioagroflorestal.png" alt="Plantio Agroflorestal">
-                    <h3>Agrofloresta</h3>
-                    <p>Combine árvores com lavouras para aumentar biodiversidade e fertilidade do solo.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+.container-header h1{
+    font-size:3.5rem;
+    margin-bottom:15px;
+    text-shadow:3px 3px 10px rgba(0,0,0,.4);
+}
 
-    <!-- Contato -->
-    <section id="contato">
-        <div class="section-content">
-            <h2>Contato</h2>
-            <p>Quer saber mais sobre Agroforte e práticas sustentáveis? Entre em contato conosco!</p>
-            <form>
-                <input type="text" placeholder="Nome" required>
-                <input type="email" placeholder="Email" required>
-                <textarea placeholder="Mensagem" required></textarea>
-                <button type="submit">Enviar</button>
-            </form>
-        </div>
-    </section>
+.container-header p{
+    font-size:1.2rem;
+    max-width:800px;
+    margin:auto;
+}
 
+/* =======================
+   MENU
+======================= */
 
-footer class="rodapé">
-<script src="script.js"></script>
-<h3 class="Desenvolvido por Mariane Dias"> Desenvolvido por Mariane Dias</h3>
-<a href="https://www.instagram.com/marianedrossini?igsh=MW9ja3RzbjVveTU1Yw==">
-<img class="rodapé-imagem" src="img/instagram.png" alt="rodapé-imagem">
-</a>
-<a href="https://www.tiktok.com/@d.rmari?_r=1&_t=ZS-96u02stIJ0a">
-<img class="rodapé-imagem" src="img/tiktok.png" alt="rodapé-imagem">
-</a>
-</footer>
-<script src="script.js"></script>
-</body>
-</html> 
+nav{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:#1b5e20;
+    box-shadow:0 3px 10px rgba(0,0,0,.2);
+}
+
+nav ul{
+    display:flex;
+    justify-content:center;
+    list-style:none;
+    flex-wrap:wrap;
+}
+
+nav li{
+    margin:10px;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    font-weight:600;
+    padding:12px 20px;
+    border-radius:30px;
+    transition:.3s;
+}
+
+nav a:hover{
+    background:#66bb6a;
+    transform:translateY(-3px);
+}
+
+/* =======================
+   SEÇÕES
+======================= */
+
+section{
+    padding:80px 20px;
+}
+
+.section-content{
+    max-width:1200px;
+    margin:auto;
+}
+
+.section-content h2{
+    text-align:center;
+    font-size:2.5rem;
+    color:#1b5e20;
+    margin-bottom:25px;
+}
+
+.section-content p{
+    text-align:center;
+    max-width:900px;
+    margin:0 auto 30px;
+}
+
+/* =======================
+   INTRODUÇÃO
+======================= */
+
+#introducao img{
+    display:block;
+    margin:30px auto;
+    width:100%;
+    max-width:650px;
+    border-radius:20px;
+    box-shadow:0 15px 30px rgba(0,0,0,.15);
+    transition:.4s;
+}
+
+#introducao img:hover{
+    transform:scale(1.03);
+}
+
+/* =======================
+   IMPACTO
+======================= */
+
+.slider-container{
+    text-align:center;
+    margin:30px 0;
+}
+
+#impactSlider{
+    width:70%;
+    accent-color:#2e7d32;
+}
+
+#impactValue{
+    font-size:1.5rem;
+    font-weight:bold;
+    color:#2e7d32;
+}
+
+.impact-visual{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    margin:40px 0;
+}
+
+#natureza,
+#producao{
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    box-shadow:0 10px 20px rgba(0,0,0,.2);
+}
+
+#natureza{
+    background:linear-gradient(135deg,#43a047,#81c784);
+}
+
+#producao{
+    background:linear-gradient(135deg,#f9a825,#ffd54f);
+}
+
+#impactText{
+    text-align:center;
+    font-weight:bold;
+    color:#1b5e20;
+}
+
+/* =======================
+   CARDS
+======================= */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+    margin-top:40px;
+}
+
+.card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-12px);
+    box-shadow:0 20px 40px rgba(0,0,0,.18);
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.card h3{
+    text-align:center;
+    color:#1b5e20;
+    margin:15px 0;
+}
+
+.card p{
+    padding:0 20px 25px;
+}
+
+/* =======================
+   CONTATO
+======================= */
+
+#contato{
+    background:linear-gradient(135deg,#e8f5e9,#c8e6c9);
+}
+
+form{
+    max-width:700px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+input,
+textarea{
+    padding:15px;
+    border:none;
+    border-radius:12px;
+    font-size:1rem;
+    box-shadow:0 4px 10px rgba(0,0,0,.1);
+}
+
+input:focus,
+textarea:focus{
+    outline:none;
+    border:2px solid #43a047;
+}
+
+textarea{
+    min-height:150px;
+}
+
+button{
+    background:#2e7d32;
+    color:white;
+    border:none;
+    padding:15px;
+    border-radius:12px;
+    cursor:pointer;
+    font-size:1rem;
+    font-weight:bold;
+    transition:.3s;
+}
+
+button:hover{
+    background:#43a047;
+    transform:scale(1.03);
+}
+
+/* =======================
+   RODAPÉ
+======================= */
+
+footer{
+    background:#0d3b12;
+    color:white;
+    text-align:center;
+    padding:30px 20px;
+}
+
+footer h3{
+    margin-bottom:15px;
+    font-weight:400;
+}
+
+.rodapé-imagem{
+    width:45px;
+    height:45px;
+    margin:10px;
+    transition:.3s;
+}
+
+.rodapé-imagem:hover{
+    transform:scale(1.2) rotate(8deg);
+}
+
+/* =======================
+   ANIMAÇÕES
+======================= */
+
+@keyframes surgir{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+section{
+    animation:surgir 1s ease;
+}
+
+/* =======================
+   RESPONSIVO
+======================= */
+
+@media(max-width:768px){
+
+    .container-header h1{
+        font-size:2.2rem;
+    }
+
+    nav ul{
+        flex-direction:column;
+    }
+
+    .impact-visual{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    #impactSlider{
+        width:90%;
+    }
+
+    .section-content h2{
+        font-size:2rem;
+    }
+}
