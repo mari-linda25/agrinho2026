@@ -1,155 +1,332 @@
 /* Reset */
-* {
+*  {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-    background-color: #f4f9f4;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f9f4;
     color: #333;
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
-/* Cabeçalho */
+/* =========================
+   HEADER
+========================= */
 header {
-    background-color: #4CAF50;
+    background: linear-gradient(rgba(0, 80, 20, 0.75), rgba(0, 80, 20, 0.75)),
+                url("img/fundo-agro.jpg");
+    background-size: cover;
+    background-position: center;
     color: white;
-    padding: 30px 20px;
     text-align: center;
+    padding: 80px 20px 30px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
 }
 
-header h1 {
-    font-size: 2.5em;
+.container-header h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
 }
 
-header p {
-    font-size: 1.2em;
-    margin-top: 10px;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    margin-top: 15px;
-    flex-wrap: wrap;
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-nav ul li a:hover {
-    color: #ffeb3b;
-}
-
-/* Seções */
-section {
-    padding: 60px 20px;
-}
-
-.section-content {
-    max-width: 1100px;
+.container-header p {
+    font-size: 1.2rem;
+    max-width: 800px;
     margin: auto;
-    text-align: center;
+    opacity: 0.95;
 }
 
-section img {
-    width: 80%;
-    max-width: 500px;
-    margin-top: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-
-/* Seção Interativa */
-.slider-container {
-    margin: 30px auto;
-    width: 60%;
-}
-
-#impactValue {
-    font-weight: bold;
-    margin-left: 10px;
-}
-
-.impact-visual {
-    position: relative;
-    width: 80%;
-    max-width: 600px;
-    height: 250px;
-    margin: 20px auto;
-    border-radius: 15px;
-    overflow: hidden;
-    background: linear-gradient(to top, #a2d5c6, #e0f2f1);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-
-#natureza {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background-color: #76c893;
-    height: 50%;
-    transition: height 0.4s ease;
-}
-
-#producao {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background-color: #f4d35e;
-    height: 50%;
-    transition: height 0.4s ease;
-}
-
-/* Cards de Boas Práticas */
-.cards {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    flex-wrap: wrap;
+/* =========================
+   MENU
+========================= */
+nav {
     margin-top: 30px;
 }
 
+nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 30px;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(8px);
+    transition: 0.3s;
+    font-weight: 600;
+}
+
+nav a:hover {
+    background: #7bc043;
+    transform: translateY(-3px);
+}
+
+/* =========================
+   SEÇÕES
+========================= */
+section {
+    padding: 80px 20px;
+}
+
+.section-content {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section-content h2 {
+    text-align: center;
+    color: #1f6b2f;
+    margin-bottom: 25px;
+    font-size: 2.3rem;
+    position: relative;
+}
+
+.section-content h2::after {
+    content: "";
+    width: 80px;
+    height: 4px;
+    background: #7bc043;
+    display: block;
+    margin: 10px auto;
+    border-radius: 10px;
+}
+
+.section-content p {
+    text-align: center;
+    max-width: 900px;
+    margin: auto;
+    font-size: 1.05rem;
+}
+
+/* =========================
+   IMAGEM INTRODUÇÃO
+========================= */
+#introducao img {
+    display: block;
+    margin: 40px auto;
+    width: 100%;
+    max-width: 650px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    transition: 0.4s;
+}
+
+#introducao img:hover {
+    transform: scale(1.03);
+}
+
+/* =========================
+   SLIDER
+========================= */
+.slider-container {
+    text-align: center;
+    margin: 40px 0;
+}
+
+#impactSlider {
+    width: 70%;
+    accent-color: #2f8f3b;
+}
+
+#impactValue {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #2f8f3b;
+}
+
+/* =========================
+   VISUAL IMPACTO
+========================= */
+.impact-visual {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 40px 0;
+}
+
+#natureza,
+#producao {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    transition: 0.5s;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+#natureza {
+    background: linear-gradient(135deg, #3cb371, #1f8f50);
+}
+
+#producao {
+    background: linear-gradient(135deg, #f4b942, #d88d00);
+}
+
+#impactText {
+    text-align: center;
+    font-weight: bold;
+    color: #1f6b2f;
+    font-size: 1.1rem;
+}
+
+/* =========================
+   CARDS
+========================= */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
 .card {
-    background-color: white;
-    border-radius: 15px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-    width: 250px;
-    padding: 20px;
-    transition: transform 0.3s, box-shadow 0.3s;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: 0.4s;
+    text-align: center;
 }
 
 .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    transform: translateY(-12px);
+    box-shadow: 0 20px 35px rgba(0,0,0,0.15);
 }
 
 .card img {
     width: 100%;
-    border-radius: 10px;
-    margin-bottom: 15px;
+    height: 220px;
+    object-fit: cover;
 }
 
-/* Formulário de contato */
+.card h3 {
+    color: #1f6b2f;
+    margin: 20px 0 10px;
+}
+
+.card p {
+    padding: 0 20px 25px;
+}
+
+/* =========================
+   CONTATO
+========================= */
+#contato {
+    background: linear-gradient(135deg, #eaf8ea, #dff0df);
+}
+
 form {
+    max-width: 700px;
+    margin: 40px auto 0;
     display: flex;
     flex-direction: column;
-    max-width: 500px;
-    margin: 20px auto 0;
-    gap: 15px;
+    gap: 18px;
 }
 
-form input, form textarea {
-    padding: 10px;
-    border-radius: 
+form input,
+form textarea {
+    padding: 15px;
+    border: 2px solid #d0e5d0;
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: #2f8f3b;
+    outline: none;
+    box-shadow: 0 0 10px rgba(47,143,59,0.2);
+}
+
+form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+button {
+    background: linear-gradient(135deg, #2f8f3b, #56b04d);
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    background: linear-gradient(135deg, #257531, #46943f);
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    background: #1a4f25;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    font-size: 0.95rem;
+}
+
+/* =========================
+   ANIMAÇÕES
+========================= */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section {
+    animation: fadeUp 0.8s ease;
+}
+
+/* =========================
+   RESPONSIVO
+========================= */
+@media (max-width: 768px) {
+
+    .container-header h1 {
+        font-size: 2.2rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .impact-visual {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #impactSlider {
+        width: 90%;
+    }
+
+    .section-content h2 {
+        font-size: 1.8rem;
+    }
+}
